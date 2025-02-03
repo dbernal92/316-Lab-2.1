@@ -7,57 +7,69 @@ const appEl = document.getElementById('app');
 const title = document.createElement('title');
 title.textContent = "Superhero Guessing Game!";
 
-// Create array of superheroes trivia
+// Create array of superheroes trivia (question bank)
 const superheroQuestions = [];
-superheroQuestions.push(
-    {
-        character: "Batman",
-        question: "Which of these real-world martial arts is NOT part of Batman's training?",
-        choices: ["A) Aikido",
-            "B) Brazilian Jiu-Jitsu",
-            "C) Krav Maga",
-            "D) Capoeira"],
-        answer: "D) Capoeira",
-        fact: "Batman trained in dozens of martial arts around the world, but Capoeira—originating in Brazil as a mix of dance and combat—was never a part of his core fighting style."
+
+// Create function to create questions and add to bank
+function addQuestion(character, question, choices, answer, fact) {
+    superheroQuestions.push({
+        character: character,
+        question: question,
+        choices: choices,
+        answer: answer,
+        fact: fact
     });
-superheroQuestions.push(
-    {
-        character: "Batman",
-        question: "Before fully embracing the identity of Batman, Bruce Wayne once used which alias in his early crime-fighting days?",
-        choices: [
-            "A) Matches Malone",
-            "B) The Shadow",
-            "C) The Owl",
-            "D) The Black Bat"],
-        answer: "A) Matches Malone",
-        fact: '"Matches Malone" was originally a real gangster. After he died, Bruce Wayne assumed his identity to infiltrate Gotham’s underworld.'
-    });
-superheroQuestions.push(
-    {
-        character: "Superman",
-        question: "What is Superman’s favorite Earth food?",
-        choices: [
-            "A) Cheeseburgers",
-            "B) Tacos",
-            "C) Apple Pie",
-            "D) Pancakes"
-        ],
-        answer: "C) Apple Pie",
-        fact: 'In multiple comics, Superman has mentioned his love for apple pie, reinforcing the "All-American" image associated with him.'
-    });
-superheroQuestions.push(
-    {
-        character: "Superman",
-        question: "Which of these is a little-known fact about Krypton's destruction?",
-        choices: [
-            "A) Krypton was destroyed by Brainiac",
-            "B) Krypton's core destabilized due to excessive energy harvesting",
-            "C)  Krypton’s sun exploded, causing a supernova",
-            "D) Krypton was frozen in time and shattered"
-        ],
-        answer: "B) Krypton’s core destabilized due to excessive energy harvesting",
-        fact: 'Kryptonians over-mined their planet’s core for energy, which caused it to collapse. Jor-El predicted this but was ignored by the Science Council.'
-    });
+}
+
+// Add trivia questions to bank
+addQuestion("Batman", "Which of these real-world martial arts is NOT part of Batman's training?", [
+    "A) Aikido",
+    "B) Brazilian Jiu-Jitsu",
+    "C) Krav Maga",
+    "D) Capoeira"
+], "D) Capoeira", "Batman trained in dozens of martial arts around the world, but Capoeira—originating in Brazil as a mix of dance and combat—was never a part of his core fighting style."
+);
+
+addQuestion("Batman", "Before fully embracing the identity of Batman, Bruce Wayne once used which alias in his early crime-fighting days?", [
+    "A) Matches Malone",
+    "B) The Shadow",
+    "C) The Owl",
+    "D) The Black Bat"
+], "A) Matches Malone", "\"Matches Malone\" was originally a real gangster. After he died, Bruce Wayne assumed his identity to infiltrate Gotham’s underworld."
+);
+
+addQuestion("Superman", "What is Superman’s favorite Earth food?", [
+    "A) Cheeseburgers",
+    "B) Tacos",
+    "C) Apple Pie",
+    "D) Pancakes"
+], "C) Apple Pie", "In multiple comics, Superman has mentioned his love for apple pie, reinforcing the \"All-American\" image associated with him."
+);
+
+addQuestion("Superman", "Which of these is a little-known fact about Krypton's destruction?", [
+    "A) Krypton was destroyed by Brainiac",
+    "B) Krypton's core destabilized due to excessive energy harvesting",
+    "C) Krypton’s sun exploded, causing a supernova",
+    "D) Krypton was frozen in time and shattered"
+], "B) Krypton’s core destabilized due to excessive energy harvesting", "Kryptonians over-mined their planet’s core for energy, which caused it to collapse. Jor-El predicted this but was ignored by the Science Council."
+);
+
+addQuestion("Wonder Woman", "Which of these is a canonical rule for Wonder Woman’s Lasso of Truth?", [
+    "A) It cannot work on other Amazons",
+    "B) It forces people to reveal their deepest fear",
+    "C) It can be used to compel someone to act against their will",
+    "D) It breaks if used on a truly innocent person"
+], "C) It can be used to compel someone to act against their will", "Despite the name, the Lasso of Truth does more than just extract facts—it can rewrite someone’s perception of reality."
+);
+
+addQuestion("Wonder Woman", "Which of these villains has Wonder Woman never defeated alone?", [
+    "A) Ares",
+    "B) Darkseid",
+    "C) Circe",
+    "D) Medusa"
+], "B) Darkseid", "While Wonder Woman has fought Darkseid multiple times, she has never defeated him completely on her own."
+);
+
 
 // Test to ensure objects print
 console.log(superheroQuestions);
@@ -65,7 +77,7 @@ console.log(superheroQuestions);
 // Create header for page
 const h1 = document.createElement('h1');
 
-h1.textContent = "DC Guessing Game!"
+h1.textContent = "DC Trivia Game"
 appEl.appendChild(h1)
 
 // Select question (object) from the array

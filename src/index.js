@@ -1,6 +1,9 @@
 // Create your game here!
 // Superhero Guessing Game
 
+// Select and cache the app element in a variable
+const appEl = document.getElementById('app');
+
 const title = document.createElement('title');
 title.textContent = "Superhero Guessing Game!";
 
@@ -59,9 +62,39 @@ superheroQuestions.push(
 // Test to ensure objects print
 console.log(superheroQuestions);
 
+// Create header for page
+const h1 = document.createElement('h1');
+
+h1.textContent = "DC Guessing Game!"
+appEl.appendChild(h1)
+
+// Select question (object) from the array
 let index = Math.floor(Math.random() * superheroQuestions.length);
 let randomQuestion = superheroQuestions[index];
+
+// Text to ensure the question is being selected via index
 console.log(randomQuestion);
+
+// Create a section on the page to display the trivia question
+const questionSection = document.createElement('div');
+// Set the id to 'question' to indicate where the trivia question should print
+questionSection.id = "question";
+
+// Extracts the question value from the object and prints it as text content
+questionSection.textContent = randomQuestion.question;
+
+// Add the div that contains the questions to the app
+appEl.appendChild(questionSection);
+
+
+
+
+
+
+
+
+
+
 
 
 

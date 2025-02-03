@@ -206,6 +206,14 @@ submitButton.setAttribute("type", "submit");
 
 submissionSection.appendChild(submitButton);
 
+// Create section to display trivia fact after user submits their answer
+const factSection = document.createElement('div');
+appEl.appendChild(factSection);
+
+// Create section to display next question button after user submits their answer
+const nextQuestionSection = document.createElement('div');
+appEl.appendChild(nextQuestionSection);
+
 // Create function to compare user answer to correct answer
 function getUserAnswer() {
     let userChoices = document.querySelectorAll('input[name="answer"]');
@@ -222,64 +230,24 @@ function getUserAnswer() {
             } else {
                 alert("Sorry, not quite right!");
             }
+            factSection.textContent = randomQuestion.fact;
 
-            break; // Stops checking once a selected answer is found
+            // Create next button
+            const nextButton = document.createElement("BUTTON");
+            nextButton.textContext = "Next";
+            nextQuestionSection.appendChild(nextButton)
+            
+            // Stops checking once a selected answer is found
+            break;
         }
     }
 }
 
+const answeredQuestions = []
+
+function removeAnsweredQuestion () {
+    superheroQuestions.splice(randomQuestion, 1)
+}
+
 submitButton.addEventListener('click', getUserAnswer);
-
-// Create section to display results
-const feedbackSection = document.createElement('div');
-appEl.appendChild(feedbackSection);
-
-// Create buttons for multiple choice options
-// var choiceA = document.createElement("INPUT");
-// choiceA.setAttribute("type", "radio");
-// choiceSection.appendChild(choiceA);
-
-// var choiceB = document.createElement("INPUT");
-// choiceB.setAttribute("type", "radio");
-// choiceSection.appendChild(choiceB);
-
-// var choiceC = document.createElement("INPUT");
-// choiceC.setAttribute("type", "radio");
-// choiceSection.appendChild(choiceC);
-
-// var choiceD = document.createElement("INPUT");
-// choiceD.setAttribute("type", "radio");
-// choiceSection.appendChild(choiceD);
-
-
-
-
-
-
-
-
-
-
-
-
-// // Get User Input
-// let userInput = window.prompt("Which superhero do you think it is?");
-// console.log("User entered:", userInput);
-
-
-
-
-
-// Object template for question info
-// {
-//     character: "", 
-//     question: "", 
-//     choices: [
-//         "A) ", 
-//         "B) ",
-//         "C) ", 
-//         "D) "
-//     ],
-//     answer: "", 
-//     fact: ""
-// })
+nextButton.addEventListener('click', )

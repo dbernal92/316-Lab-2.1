@@ -22,6 +22,7 @@ function addQuestion(character, question, choices, answer, fact) {
 }
 
 // Add trivia questions to bank
+// Batman
 addQuestion("Batman", "Which of these real-world martial arts is NOT part of Batman's training?", [
     "A) Aikido",
     "B) Brazilian Jiu-Jitsu",
@@ -38,6 +39,7 @@ addQuestion("Batman", "Before fully embracing the identity of Batman, Bruce Wayn
 ], "A) Matches Malone", "\"Matches Malone\" was originally a real gangster. After he died, Bruce Wayne assumed his identity to infiltrate Gotham’s underworld."
 );
 
+// Superman
 addQuestion("Superman", "What is Superman’s favorite Earth food?", [
     "A) Cheeseburgers",
     "B) Tacos",
@@ -54,6 +56,7 @@ addQuestion("Superman", "Which of these is a little-known fact about Krypton's d
 ], "B) Krypton’s core destabilized due to excessive energy harvesting", "Kryptonians over-mined their planet’s core for energy, which caused it to collapse. Jor-El predicted this but was ignored by the Science Council."
 );
 
+// Wonderwoman
 addQuestion("Wonder Woman", "Which of these is a canonical rule for Wonder Woman’s Lasso of Truth?", [
     "A) It cannot work on other Amazons",
     "B) It forces people to reveal their deepest fear",
@@ -70,6 +73,73 @@ addQuestion("Wonder Woman", "Which of these villains has Wonder Woman never defe
 ], "B) Darkseid", "While Wonder Woman has fought Darkseid multiple times, she has never defeated him completely on her own."
 );
 
+// The Flash
+addQuestion("The Flash", "What happens if The Flash runs too fast?", [
+    "A) He erases himself from existence",
+    "B) He loses his connection to the Speed Force",
+    "C) He becomes trapped in a time loop",
+    "D) All of the above"
+], "D) All of the above", "The Speed Force is unpredictable—Flash has erased himself, lost his powers, and been stuck in time loops by pushing too hard."
+);
+
+addQuestion("The Flash", "What bizarre side effect does the Speed Force have on users?", [
+    "A) They forget their loved ones' faces over time",
+    "B) They constantly need to consume enormous amounts of food",
+    "C) They begin vibrating uncontrollably if they stop running",
+    "D) They age in reverse if they stop moving for too long"
+], "B) They constantly need to consume enormous amounts of food", "The Flash burns through calories at an impossible rate, requiring huge amounts of food to sustain his metabolism."
+);
+
+// Green Lantern
+addQuestion("Green Lantern", "What is the power source of Green Lantern’s ring?", [
+    "A) Cosmic radiation",
+    "B) Emotional spectrum energy",
+    "C) The blood of fallen Lanterns",
+    "D) Alien minerals"
+], "B) Emotional spectrum energy", "Each Lantern Corps draws power from different emotions—Green Lanterns use willpower, Red Lanterns use rage, etc."
+);
+
+addQuestion("Green Lantern", "Which of these colors is NOT associated with an existing Lantern Corps?", [
+    "A) White",
+    "B) Indigo",
+    "C) Orange",
+    "D) Pink"
+], "D) Pink", "While there are Lantern Corps representing many colors of the Emotional Spectrum, there is no official Pink Lantern Corps."
+);
+
+// Green Arrow
+addQuestion("Green Arrow", "Green Arrow once temporarily lost his fortune. How did he adapt?", [
+    "A) He lived in the woods and trained himself in survival",
+    "B) He built his own weapons out of scrap materials",
+    "C) He became mayor of Star City",
+    "D) He started working as a private investigator"
+], "C) He became mayor of Star City", "In one storyline, Oliver Queen became the mayor of Star City after losing his fortune, attempting to fight crime through politics."
+);
+
+addQuestion("Green Arrow", "What is Green Arrow’s most iconic trick arrow?", [
+    "A) Boxing Glove Arrow",
+    "B) Fireworks Arrow",
+    "C) Net Arrow",
+    "D) Poison Gas Arrow"
+], "A) Boxing Glove Arrow", "The Boxing Glove Arrow is one of Green Arrow’s most famous gimmick weapons, often played for humor but used effectively in combat."
+);
+
+// Supergirl
+addQuestion("Supergirl", "Which of these weaknesses does Supergirl have that Superman does not?", [
+    "A) Magic",
+    "B) Lead",
+    "C) Psychological conditioning",
+    "D) Solar overexposure"
+], "C) Psychological conditioning", "In some versions, Supergirl has been brainwashed or conditioned more easily than Superman, partly due to spending her early years in stasis."
+);
+
+addQuestion("Supergirl", "In some versions of her origin, why does Supergirl struggle to control her powers more than Superman?", [
+    "A) Her cells absorbed yellow sunlight too quickly, causing instability",
+    "B) Krypton had stronger gravity when she was born",
+    "C) She spent years trapped in the Phantom Zone, delaying her adaptation to Earth",
+    "D) She has a genetic mutation that makes her powers unpredictable"
+], "C) She spent years trapped in the Phantom Zone, delaying her adaptation to Earth", "Unlike Superman, who gradually adapted to Earth's environment as a baby, Supergirl arrived as a teenager after being stuck in the Phantom Zone. This delay made it harder for her to control her abilities."
+);
 
 // Test to ensure objects print
 console.log(superheroQuestions);

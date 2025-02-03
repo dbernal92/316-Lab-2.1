@@ -77,6 +77,7 @@ console.log(randomQuestion);
 
 // Create a section on the page to display the trivia question
 const questionSection = document.createElement('div');
+
 // Set the id to 'question' to indicate where the trivia question should print
 questionSection.id = "question";
 
@@ -86,6 +87,56 @@ questionSection.textContent = randomQuestion.question;
 // Add the div that contains the questions to the app
 appEl.appendChild(questionSection);
 
+
+// Create a section on the page to display trivia choices
+const choiceSection = document.createElement('div');
+
+// Set the id to 'choices' to indicate where the trivia choices should print
+choiceSection.id = "choices";
+
+// Add the div that contains the questions to the app
+appEl.appendChild(choiceSection);
+
+// Loops through the choices to create a radio button for each
+for (let key of randomQuestion.choices) {
+    let label = document.createElement('label');
+    let input = document.createElement('input');
+
+    input.type = 'radio';
+    input.name = "answer";
+
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(key));
+    choiceSection.appendChild(label);
+
+    // Put each trivia choice on its own line
+    const br = document.createElement('br');
+    label.append(br);
+}
+
+
+
+// function createRadioButton() {
+
+// }
+
+
+// Create buttons for multiple choice options
+// var choiceA = document.createElement("INPUT");
+// choiceA.setAttribute("type", "radio");
+// choiceSection.appendChild(choiceA);
+
+// var choiceB = document.createElement("INPUT");
+// choiceB.setAttribute("type", "radio");
+// choiceSection.appendChild(choiceB);
+
+// var choiceC = document.createElement("INPUT");
+// choiceC.setAttribute("type", "radio");
+// choiceSection.appendChild(choiceC);
+
+// var choiceD = document.createElement("INPUT");
+// choiceD.setAttribute("type", "radio");
+// choiceSection.appendChild(choiceD);
 
 
 

@@ -87,7 +87,6 @@ questionSection.textContent = randomQuestion.question;
 // Add the div that contains the questions to the app
 appEl.appendChild(questionSection);
 
-
 // Create a section on the page to display trivia choices
 const choiceSection = document.createElement('div');
 
@@ -114,11 +113,10 @@ for (let key of randomQuestion.choices) {
     label.append(br);
 }
 
+var submitButton = document.createElement("INPUT");
+submitButton.setAttribute("type", "submit");
 
-
-// function createRadioButton() {
-
-// }
+appEl.appendChild(submitButton);
 
 
 // Create buttons for multiple choice options
